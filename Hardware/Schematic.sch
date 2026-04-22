@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -4169,8 +4169,8 @@ IMU, SWD</text>
 <instance part="SUPPLY1" gate="G$1" x="300.99" y="63.5" smashed="yes">
 <attribute name="VALUE" x="300.99" y="60.96" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY3" gate="G$1" x="307.34" y="99.06" smashed="yes">
-<attribute name="VALUE" x="307.34" y="96.52" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY3" gate="G$1" x="307.34" y="97.79" smashed="yes">
+<attribute name="VALUE" x="307.34" y="95.25" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY4" gate="G$1" x="287.02" y="124.46" smashed="yes">
 <attribute name="VALUE" x="287.02" y="121.92" size="1.778" layer="96" align="bottom-center"/>
@@ -4624,6 +4624,17 @@ IMU, SWD</text>
 <pinref part="SUPPLY13" gate="G$1" pin="GND"/>
 <pinref part="C13" gate="C$1" pin="1"/>
 </segment>
+<segment>
+<wire x1="262.89" y1="106.68" x2="276.86" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="106.68" x2="276.86" y2="102.87" width="0.1524" layer="91"/>
+<pinref part="SUPPLY40" gate="G$1" pin="GND"/>
+<pinref part="U1" gate="G$1" pin="VSS_PAD"/>
+</segment>
+<segment>
+<wire x1="307.34" y1="105.41" x2="307.34" y2="100.33" width="0.1524" layer="91"/>
+<pinref part="SUPPLY3" gate="G$1" pin="GND"/>
+<pinref part="C8" gate="C$1" pin="2"/>
+</segment>
 </net>
 <net name="N$29" class="0">
 <segment>
@@ -4855,7 +4866,6 @@ IMU, SWD</text>
 </net>
 <net name="N$35" class="0">
 <segment>
-<wire x1="119.38" y1="182.88" x2="119.38" y2="181.61" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="181.61" x2="119.38" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="184.15" y1="154.94" x2="130.81" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="130.81" y1="154.94" x2="130.81" y2="177.8" width="0.1524" layer="91"/>
@@ -4965,23 +4975,15 @@ IMU, SWD</text>
 <pinref part="U1" gate="G$1" pin="P0.25@AC21"/>
 </segment>
 </net>
-<net name="N$26" class="0">
-<segment>
-<wire x1="262.89" y1="106.68" x2="276.86" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="276.86" y1="106.68" x2="276.86" y2="102.87" width="0.1524" layer="91"/>
-<pinref part="SUPPLY40" gate="G$1" pin="GND"/>
-<pinref part="U1" gate="G$1" pin="VSS_PAD"/>
-</segment>
-</net>
 <net name="VBUS" class="1">
 <segment>
 <wire x1="21.59" y1="232.41" x2="21.59" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="21.59" y1="236.22" x2="49.53" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="21.59" y1="236.22" x2="11.43" y2="236.22" width="0.1524" layer="91"/>
-<label x="11.43" y="236.22" size="1.27" layer="95" rot="R180" xref="yes"/>
-<junction x="21.59" y="236.22"/>
+<wire x1="21.59" y1="236.22" x2="16.51" y2="236.22" width="0.1524" layer="91"/>
+<label x="16.51" y="236.22" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="IC1" gate="G$1" pin="IN"/>
 <pinref part="C38" gate="C$1" pin="1"/>
+<junction x="21.59" y="236.22"/>
 </segment>
 <segment>
 <wire x1="201.93" y1="99.06" x2="201.93" y2="85.09" width="0.1524" layer="91"/>
@@ -5078,6 +5080,7 @@ IMU, SWD</text>
 <pinref part="C6" gate="C$1" pin="1"/>
 <pinref part="U1" gate="G$1" pin="VDD@W1"/>
 <pinref part="U1" gate="G$1" pin="VDDH@Y2"/>
+<label x="162.56" y="124.46" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="83.82" y1="118.11" x2="87.63" y2="118.11" width="0.1524" layer="91"/>
@@ -5174,13 +5177,6 @@ IMU, SWD</text>
 <wire x1="262.89" y1="124.46" x2="271.78" y2="124.46" width="0.1524" layer="91"/>
 <label x="271.78" y="124.46" size="1.27" layer="95" xref="yes"/>
 <pinref part="U1" gate="G$1" pin="P1.01@Y23"/>
-</segment>
-</net>
-<net name="N.C." class="0">
-<segment>
-<wire x1="307.34" y1="105.41" x2="307.34" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="SUPPLY3" gate="G$1" pin="GND"/>
-<pinref part="C8" gate="C$1" pin="2"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -5953,6 +5949,12 @@ Protection</text>
 <pinref part="C43" gate="C$1" pin="2"/>
 <pinref part="C42" gate="C$1" pin="2"/>
 </segment>
+<segment>
+<wire x1="311.15" y1="92.71" x2="304.8" y2="92.71" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="92.71" x2="304.8" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="SUPPLY59" gate="G$1" pin="GND"/>
+<pinref part="D3" gate="G$1" pin="GND"/>
+</segment>
 </net>
 <net name="N$6" class="0">
 <segment>
@@ -6121,12 +6123,14 @@ Protection</text>
 <wire x1="279.4" y1="173.99" x2="308.61" y2="173.99" width="0.1524" layer="91"/>
 <wire x1="308.61" y1="173.99" x2="308.61" y2="171.45" width="0.1524" layer="91"/>
 <wire x1="308.61" y1="173.99" x2="342.9" y2="173.99" width="0.1524" layer="91"/>
-<wire x1="342.9" y1="173.99" x2="342.9" y2="171.45" width="0.1524" layer="91"/>
 <label x="345.44" y="173.99" size="1.27" layer="95" rot="MR180" xref="yes"/>
-<junction x="308.61" y="173.99"/>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="342.9" y1="173.99" x2="342.9" y2="171.45" width="0.1524" layer="91"/>
+<wire x1="342.9" y1="173.99" x2="345.44" y2="173.99" width="0.1524" layer="91"/>
+<junction x="308.61" y="173.99"/>
+<junction x="342.9" y="173.99"/>
 </segment>
 <segment>
 <wire x1="153.67" y1="199.39" x2="153.67" y2="201.93" width="0.1524" layer="91"/>
@@ -6426,14 +6430,6 @@ Protection</text>
 <pinref part="R2_USB" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$7" class="0">
-<segment>
-<wire x1="311.15" y1="92.71" x2="304.8" y2="92.71" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="92.71" x2="304.8" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="SUPPLY59" gate="G$1" pin="GND"/>
-<pinref part="D3" gate="G$1" pin="GND"/>
-</segment>
-</net>
 <net name="D_N" class="0">
 <segment>
 <wire x1="344.17" y1="95.25" x2="351.79" y2="95.25" width="0.1524" layer="91"/>
@@ -6451,6 +6447,56 @@ Protection</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,184.15,160.02,U1,DEC1,N$32,,,"/>
+<approved hash="104,1,184.15,124.46,U1,VDD,3V3,,,"/>
+<approved hash="104,1,245.11,177.8,U1,VDD,3V3,,,"/>
+<approved hash="104,1,209.55,177.8,U1,VSS,GND,,,"/>
+<approved hash="104,1,207.01,177.8,U1,DEC4,N$41,,,"/>
+<approved hash="104,1,201.93,177.8,U1,VDD,3V3,,,"/>
+<approved hash="104,1,184.15,121.92,U1,VDDH,3V3,,,"/>
+<approved hash="104,1,224.79,99.06,U1,VDD,3V3,,,"/>
+<approved hash="104,1,262.89,116.84,U1,VDD,3V3,,,"/>
+<approved hash="104,2,218.44,147.32,U3,CTG,GND,,,"/>
+<approved hash="104,2,218.44,144.78,U3,CELL,VBAT,,,"/>
+<approved hash="104,2,218.44,142.24,U3,VDD,VBAT,,,"/>
+<approved hash="104,2,218.44,139.7,U3,EP,GND,,,"/>
+<approved hash="106,1,184.15,137.16,IMU_INT1,,,,,"/>
+<approved hash="106,1,184.15,134.62,IMU_INT2,,,,,"/>
+<approved hash="106,1,86.36,44.45,MU_INT1,,,,,"/>
+<approved hash="106,1,83.82,44.45,MU_INT2,,,,,"/>
+<approved hash="106,1,184.15,147.32,P0.04,,,,,"/>
+<approved hash="106,1,262.89,144.78,P0.09,,,,,"/>
+<approved hash="106,1,227.33,99.06,P0.19,,,,,"/>
+<approved hash="106,1,229.87,99.06,P0.20,,,,,"/>
+<approved hash="106,1,232.41,99.06,P0.21,,,,,"/>
+<approved hash="106,1,234.95,99.06,P0.22,,,,,"/>
+<approved hash="106,1,237.49,99.06,P0.23,,,,,"/>
+<approved hash="106,1,240.03,99.06,P0.24,,,,,"/>
+<approved hash="106,1,242.57,99.06,P0.25,,,,,"/>
+<approved hash="106,1,184.15,152.4,P0.26,,,,,"/>
+<approved hash="106,1,184.15,149.86,P0.27,,,,,"/>
+<approved hash="106,1,219.71,177.8,P0.28,,,,,"/>
+<approved hash="106,1,217.17,177.8,P0.29,,,,,"/>
+<approved hash="106,1,214.63,177.8,P0.30,,,,,"/>
+<approved hash="106,1,212.09,177.8,P0.31,,,,,"/>
+<approved hash="106,1,262.89,129.54,P1.03,,,,,"/>
+<approved hash="106,1,262.89,132.08,P1.04,,,,,"/>
+<approved hash="106,1,262.89,134.62,P1.05,,,,,"/>
+<approved hash="106,1,262.89,137.16,P1.06,,,,,"/>
+<approved hash="106,1,262.89,139.7,P1.07,,,,,"/>
+<approved hash="106,1,184.15,132.08,P1.09,,,,,"/>
+<approved hash="106,1,242.57,177.8,P1.10,,,,,"/>
+<approved hash="106,1,240.03,177.8,P1.11,,,,,"/>
+<approved hash="106,1,234.95,177.8,P1.12,,,,,"/>
+<approved hash="106,1,232.41,177.8,P1.13,,,,,"/>
+<approved hash="106,1,229.87,177.8,P1.14,,,,,"/>
+<approved hash="106,1,227.33,177.8,P1.15,,,,,"/>
+<approved hash="106,1,49.53,238.76,PMIC_IN,,,,,"/>
+<approved hash="106,1,184.15,129.54,PMIC_INT,,,,,"/>
+<approved hash="113,2,192.301,127.531,FRAME2,,,,,"/>
+<approved hash="113,2,93.6396,175.26,SJ1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
